@@ -1,18 +1,214 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jilene's Portfolio</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://use.fontawesome.com/3e86b2749f.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <nav class="top-nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#hobbies" class="nav-link">Hobbies</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="landing-text">
+              <h1>Jilene Maldonado</h1>
+              <h6>Georgia Tech Undergraduate Student | Software Engineer</h6>
+            </div>
+        </header>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="container">                
+                <div class="profile-img">
+                    <img src="/images/profile-pic.jpg" alt="">
+                </div>
+
+                <div class="about-details">                
+                    <div class="about-heading">
+                        <h1>About</h1>
+                        <h6>Myself</h6>
+                    </div>
+                    
+                    <p>
+                        Hello! My name is Jilene Maldonado and I am a Georgia Tech student working towards my bachelors
+                        in computer science. I love all things techy and have a passion for learning new things. Join me
+                        on my journey and check out my portfolio! 
+                    </p>
+
+                    <!-- ERRORS WITH RESIZING ICONS, "social-links" class causes div to disappear -->
+                    <div>
+                        <ul class="nav-list">
+                            <li>
+                                <a href="https://github.com/jilmal" class="icon-link">
+                                    <i class="fa fa-github fa-5x aria-hidden="true""></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jilene-mal" class="icon-link">
+                                    <i class="fa fa-linkedin fa-5x aria-hidden="true""></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-heading">
+                    <h1>Portfolio</h1>
+                    <h6>View recent projects</h6>
+                </div>
+
+                 <div class="portfolio-item">
+                    <div class="portfolio-description">
+                        <h6>Web Development</h6>
+                        <h1>Housing Justice Evaluation Tool</h1>
+                        <p>
+                            Currently for my Junior Design Project, my team and I have been working alongside a client to create an application 
+                            for housing experts to more effectively counsel African American communities suffering from a lack of housing justice. 
+                            These communties are suffering from a vast number of issues including gentrification, home abandonment, mortgage crisis, etc.
+                            The platform allows counselors to quickly assess homeowner concerns and turn over solutions immediatly on a case by case basis.                      
+                        </p>
+                    </div>                    
+                    <div class="portfolio-img">
+                        <img src="/images/HJET.png" alt="">
+                    </div>                    
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-description">
+                        <h6>UI Design</h6>
+                        <h1>Fortnite Track 2.0</h1>
+                        <p>
+                            My team and I researched and developed the UI for a Fortnite Esports platform targeted to help 
+                            streamline the process for novice players to become pro players. The main feature of the application
+                            highlights users' "problem areas" (i.e. poor aim performance) and provides training videos and guides
+                            to improve the player's skill.
+                        </p>
+                    </div>
+                    <div class="portfolio-img">
+                        <img src="/images/fortnite-tracker.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="portfolio-item">                    
+                    <div class="portfolio-description">
+                        <h6>Web Development</h6>
+                        <h1>Coorganate</h1>
+                        <p>
+                            During my internship at IBM, my team and I created a web application for physicians 
+                            and transplant centers to mitigate organ waste currently happening in hospital systems.
+                            I worked alongside 2 other peers to implement the frontend of the platform utilizing HTML,
+                            CSS, and Materialze.
+                        </p>
+                    </div>
+                    <div class="portfolio-img">
+                        <img src="/images/SignUp.png" alt="">
+                    </div>
+                </div>
+
+                <div class="portfolio-item">                    
+                    <div class="portfolio-description">
+                        <h6>Mbed/ARM Development</h6>
+                        <h1>YeeYee Adventures</h1>
+                        <p>
+                            During my Programming for Hardware/Software Systems course, I created a cowboy adventure video game
+                            utilizing a Hash Table implementation in C to render the game objects, maps, and sprites. The game 
+                            was ran on an Mbed microcontroller which allowed the users to navigate the game through motion detection
+                            and interact with objects through external buttons.
+                        </p>
+                    </div>
+                    <div class="portfolio-img">
+                        <img src="/images/cowboy-adv.jpeg" alt="" width="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOBBIES -->
+        <section class="hobbies" id="hobbies">
+            <div class="container">
+                <div class="section-heading">
+                    <h1>Hobbies</h1>
+                    <h6>Check out some of my hobbies!</h6>
+                </div>
+
+                <div class="portfolio-item">                    
+                    <div class="portfolio-description">
+                        <h1>Skateboarding</h1>
+                        <p>
+                            Although I just started taking the hobby more serious, I've really enjoyed the challenge 
+                            of learning how to skateboard. It's a very grueling sport that teaches you the value of 
+                            getting up and trying again and again after each fall. I really value skateboarding because
+                            it constantly pushes me outside my comfort zone and forces me to take risks all while reminding
+                            me that persistance is necessary to meet my goals when trying to land a new trick.
+                        </p>
+                    </div>
+                    <div class="portfolio-img">
+                        <img src="/images/skateboarding.jpg" alt="" width="300">
+                    </div>
+                </div>
+
+                <div class="portfolio-item">                    
+                    <div class="portfolio-description">
+                        <h1>Thrifting/Fashion</h1>
+                        <p>
+                            It wasn't until my junior year of college that I became very invested in the fashion world 
+                            and grew an obsession for thrifting and discovering my own style. Thrifting not only helps
+                            the environment, but it also presents creative challenges when browsing different materials,
+                            patterns, and pieces to create new looks.
+                        </p>
+                    </div>
+                    <div class="portfolio-img">
+                        <img src="/images/fashion.jpeg" alt="" width="300">
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-description">
+                        <h1>Video Games</h1>
+                        <p>
+                            Growing up video games played an integral part of my life and not only provided
+                            an outlet for relieving stress, but also sparked my interest in learning more 
+                            about computer science. Nowadays, given a busy college schedule, having the freetime
+                            to play games is a bit more rare, but when I am I usually stick to competitive 
+                            shooters like CSGO (although I'm not very good anymore).
+                        </p>
+                    </div>                    
+                    <div class="portfolio-img">
+                        <img src="/images/pc.jpg" alt="" width="300">
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+        <footer class="copyright">
+            <p>&copy; 2020 Jilene Maldonado</p>
+        </footer>
+    </body>
 </html>
