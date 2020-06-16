@@ -19,16 +19,19 @@ function getComments() {
     const commentsListElement = document.getElementById('comments-section');
     commentsListElement.innerHTML = '';
     
-    for (com in comments) {
-      commentsListElement.appendChild(
-        createListElement(comments[com]));
-    }
+    comments.forEach((com) => {
+      commentsListElement.appendChild(createListElement(com));
+    })
+    // for (com in comments) {
+    //   commentsListElement.appendChild(
+    //     createListElement(comments[com]));
+    // }
   });
 }
 
 /** Creates an <li> element containing text. */
-function createListElement(text) {
+function createListElement(comment) {
   const liElement = document.createElement('li');
-  liElement.innerText = text;
+  liElement.innerText = comment.input;
   return liElement;
 }
