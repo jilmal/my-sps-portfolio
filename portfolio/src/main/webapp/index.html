@@ -11,7 +11,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="script.js"></script>
     </head>
-    <body>
+    <body onload="getComments()">
         <!-- HEADER -->
         <header>
             <nav class="top-nav">
@@ -203,6 +203,26 @@
                         <img src="/images/pc.jpg" alt="" width="300">
                     </div>                    
                 </div>
+            </div>
+        </section>
+
+        <!-- COMMENTS -->
+        <section class="comments" id="comments">
+            <div class="container">
+                <div class="section-heading">
+                    <h1>View the comments</h1>
+                    <h6>Click the button!</h6>
+                </div>
+
+                <form action="/data" method="POST">
+                        <p>Enter a comment:</p>
+                        <textarea name="text-input"></textarea>
+                        <br/>
+
+                        <input type="submit" />
+                </form>
+
+                <div id="comments-section"></div>
             </div>
         </section>
 
