@@ -22,10 +22,6 @@ function getComments() {
     comments.forEach((com) => {
       commentsListElement.appendChild(createListElement(com));
     })
-    // for (com in comments) {
-    //   commentsListElement.appendChild(
-    //     createListElement(comments[com]));
-    // }
   });
 }
 
