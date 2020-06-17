@@ -19,10 +19,7 @@ function getComments() {
     const commentsListElement = document.getElementById('comments-section');
     commentsListElement.innerHTML = '';
     
-    for (com in comments) {
-      commentsListElement.appendChild(
-        createListElement(comments[com]));
-    }
+    comments.forEach(com => commentsListElement.appendChild(createListElement(com)));
   });
 }
 
