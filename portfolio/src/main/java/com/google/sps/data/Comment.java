@@ -13,6 +13,7 @@
 // limitations under the License.
 
 package com.google.sps.data;
+import com.google.appengine.api.datastore.Entity;
 
 /** A comment in comment section. */
 public final class Comment {
@@ -25,5 +26,17 @@ public final class Comment {
     this.id = id;
     this.input = input;
     this.timestamp = timestamp;
+  }
+
+  public static Comment fromEntity(Entity entity) {
+    long id = entity.getKey().getId();
+    String input = (String) entity.getProperty("input");
+    long timestamp = (long) entity.getProperty("timestamp");
+    return new Comment(id, input, timestamp);
+  }
+
+  @Override
+  public String toString() {
+      return "ID: " + id + ", Input: " + input + ", Timestamp: " + timestamp;
   }
 }
