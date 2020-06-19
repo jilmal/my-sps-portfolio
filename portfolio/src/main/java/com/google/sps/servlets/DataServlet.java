@@ -25,11 +25,12 @@ import com.google.sps.data.Comment;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-// import java.util.stream.Collectors;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+import java.util.ArrayList;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
@@ -52,9 +53,8 @@ public class DataServlet extends HttpServlet {
     // send JSON as response
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(comments));
-    System.out.println(gson.toJson(comments));
   }
-
+  
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
