@@ -13,6 +13,7 @@
 // limitations under the License.
 
 function getComments() {
+  fetchBlobstoreUrl();
   fetch('/data').then(response => response.json()).then((comments) => {
     console.log(comments);
 
@@ -23,11 +24,9 @@ function getComments() {
       commentsListElement.appendChild(createListElement(com));
     })
   });
-
-  fetchBlobstoreUrlAndShowForm();
 }
 
-function fetchBlobstoreUrlAndShowForm() {
+function fetchBlobstoreUrl() {
   fetch('/blobstore-upload-url')
       .then((response) => {
         return response.text();

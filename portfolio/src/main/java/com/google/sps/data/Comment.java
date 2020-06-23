@@ -21,22 +21,25 @@ public final class Comment {
   private final long id;
   private final String input;
   private final long timestamp;
+  private final String imageUrl;
 
-  public Comment(long id, String input, long timestamp) {
+  public Comment(long id, String input, long timestamp, String imageUrl) {
     this.id = id;
     this.input = input;
     this.timestamp = timestamp;
+    this.imageUrl = imageUrl;
   }
 
   public static Comment fromEntity(Entity entity) {
     long id = entity.getKey().getId();
     String input = (String) entity.getProperty("input");
     long timestamp = (long) entity.getProperty("timestamp");
-    return new Comment(id, input, timestamp);
+    String imageUrl = (String) entity.getProperty("imageUrl");
+    return new Comment(id, input, timestamp, imageUrl);
   }
 
   @Override
   public String toString() {
-      return "ID: " + id + ", Input: " + input + ", Timestamp: " + timestamp;
+      return "ID: " + id + ", Input: " + input + ", Timestamp: " + timestamp + ", ImageUrl: " + imageUrl;
   }
 }
