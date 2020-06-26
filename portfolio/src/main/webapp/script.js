@@ -37,9 +37,12 @@ function fetchBlobstoreUrl() {
       });
 }
 
-/** Creates an <li> element containing text. */
+/** Creates an <li> element containing text and image. */
 function createListElement(comment) {
   const liElement = document.createElement('li');
   liElement.innerText = comment.input;
+  const imgElement = document.createElement('img');
+  imgElement.src = comment.imageUrl;
+  liElement.appendChild(imgElement);
   return liElement;
 }
